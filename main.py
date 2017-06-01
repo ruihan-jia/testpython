@@ -5,87 +5,69 @@ from xml.etree.ElementTree import parse
 import string
 from collections import Counter
 import datetime as dt
+from pymongo import MongoClient
 
+#default url
 url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4661086"
 unwanted_chars = ".,()[]"
 
-content = urllib.request.urlopen(url).read()
+#setup mongodb
+client = MongoClient()
+db = client.task1
+collection = db.publications
+pubData = {}
 
-#print (content)
+#get xml and parse it
+content = urllib.request.urlopen(url).read()
 soup = BeautifulSoup(content, "xml")
 
-#print (soup)
-
+#record time
 n1 = dt.datetime.now()
 
+#parse the body portion of publication
 bodyText = soup.find("body").text
 bodyText=bodyText.translate(str.maketrans('','',unwanted_chars))
 bodyWords = bodyText.split()
-
-#print(bodyWords)
-
 bodyWordFreq = {}
-
-'''
-unwanted_chars = ".,()"
-for line in bodyWords:
-	#print (line)
-	word = line.strip(unwanted_chars)
-	#print (word)
-	if word not in bodyWordFreq:
-		bodyWordFreq[word] = 1
-	bodyWordFreq[word] += 1
-'''
-
 bodyWordFreq = Counter(bodyWords)
 
-#print(bodyWordFreq)
-
-
+figData = {}
+i = 1
+#parse each figure info for publication
 for fig in soup.find_all("fig"):
-	print("===============NEW FIGURE=================")
-	figText = fig.text
+	figTitle = fig.find("label").text
+	print("===============", figTitle, "=================")
+	figTitle = "fig"+str(i)
+	print(i, figTitle)
+	i=i+1
+
+	figData[figTitle]={}
+	figText = fig.find("caption").text
 	figText2 = figText.translate(str.maketrans('','',unwanted_chars))
 	figText3 = figText2.split()
 	figTextFreq = Counter(figText3)
+	figData[figTitle]["url"] = fig.find("graphic")['xlink:href']
+	figData[figTitle]["caption"] = figText
+	#print("figure url is: ", fig.find("graphic")['xlink:href'])
 
+	#used to store word co-occurrences
+	cooc = {}
 	for word in figTextFreq:
 		print(word)
 		if word in bodyWordFreq:
 			print("exist:", figTextFreq[word], bodyWordFreq[word])
+			cooc[word] = figTextFreq[word] + bodyWordFreq[word]
 		else:
 			print("does not exist")
+	figData[figTitle]["cooc"] = cooc
 
-'''
-test = soup.find_all("fig")[0].text
+pubData["figData"] = figData
 
-test=test.translate(str.maketrans('','',unwanted_chars))
+print(pubData)
 
-test2 = test.split()
-
-
-test3 = Counter(test2)
-
-
-#print(test3)
-
-for word in test3:
-	word = word.strip(unwanted_chars)
-	print(word)
-	if word in bodyWordFreq:
-		print("exist:", test3[word], bodyWordFreq[word])
-	else:
-		print("does not exist")
-'''
-
+#record end time
 n2=dt.datetime.now()
-
 print((n2-n1).microseconds)
-
-#figs = soup.find_all("fig")
-
-#for d in figs:
-#	print (d.text)
 
 
 
