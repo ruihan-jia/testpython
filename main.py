@@ -15,10 +15,10 @@ n1 = dt.datetime.now()
 api = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id="
 #pid = "4661086"
 #url = api + pid
-unwanted_chars = ".,()[]"
+unwanted_chars = ".,()[]$"
 
 #with open('pmcids') as f:
-with open('pmcids1') as f:
+with open('pmcids8') as f:
 #with open('test') as f:
 	content = f.readlines()
 
@@ -32,6 +32,8 @@ progress = 1
 
 for x in content:
 	url = api + x
+	if x == '\n':
+		continue
 	print("--------------publication no.", progress, "----------------")
 	print(url)
 	print(x)
@@ -42,6 +44,8 @@ for x in content:
 	soup = BeautifulSoup(content, "xml")
 
 	#parse the body portion of publication
+	if not soup.find("body"):
+		continue
 	bodyText = soup.find("body").text
 	bodyText=bodyText.translate(str.maketrans('','',unwanted_chars))
 	bodyWords = bodyText.split()
@@ -60,16 +64,19 @@ for x in content:
 
 		figData[figTitle]={}
 
+		if fig.find("graphic"):
+			if fig.find("graphic").has_attr('xlink:href'):
+				figData[figTitle]["url"] = fig.find("graphic")['xlink:href']
+			elif fig.find("graphic").has_attr('href'):
+				figData[figTitle]["url"] = fig.find("graphic")['href']
+
 		if fig.find("caption"):
 			figText = fig.find("caption").text
 			figText2 = figText.translate(str.maketrans('','',unwanted_chars))
 			figText3 = figText2.split()
 			figTextFreq = Counter(figText3)
 			#print(fig.find("graphic"))
-			if fig.find("graphic").has_attr('xlink:href'):
-				figData[figTitle]["url"] = fig.find("graphic")['xlink:href']
-			elif fig.find("graphic").has_attr('href'):
-				figData[figTitle]["url"] = fig.find("graphic")['href']
+
 			figData[figTitle]["caption"] = figText
 
 			#used to store word co-occurrences

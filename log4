@@ -1,0 +1,451 @@
+--------------publication no. 1 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4849148
+
+4849148
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+=============== Figure 8 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebe82120>
+--------------publication no. 2 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4518312
+
+4518312
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebf09900>
+--------------publication no. 3 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4018993
+
+4018993
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+=============== Figure 8 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebd97ea0>
+--------------publication no. 4 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3628745
+
+3628745
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4a =================
+=============== Figure 4b =================
+=============== Figure 5 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebd97828>
+--------------publication no. 5 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3759473
+
+3759473
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebd98630>
+--------------publication no. 6 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3639397
+
+3639397
+
+=============== Figure 1. =================
+=============== Figure 2. =================
+=============== Figure 3. =================
+=============== Figure 4. =================
+=============== Figure 5. =================
+=============== Figure 6. =================
+<pymongo.results.InsertOneResult object at 0x7f28ebf09dc8>
+--------------publication no. 7 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=515295
+
+515295
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebf09828>
+--------------publication no. 8 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4837268
+
+4837268
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebf09d80>
+--------------publication no. 9 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4848977
+
+4848977
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+<pymongo.results.InsertOneResult object at 0x7f28eb697af8>
+--------------publication no. 10 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3204482
+
+3204482
+
+=============== Fig. 1 =================
+=============== Fig. 2 =================
+=============== Fig. 3 =================
+=============== Fig. 4 =================
+<pymongo.results.InsertOneResult object at 0x7f28eb5fcc60>
+--------------publication no. 11 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3815462
+
+3815462
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebc7ad38>
+--------------publication no. 12 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4876403
+
+4876403
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebc7ae58>
+--------------publication no. 13 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4260204
+
+4260204
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+=============== Figure 8 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebe82870>
+--------------publication no. 14 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3216985
+
+3216985
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebe4fd38>
+--------------publication no. 15 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=2711571
+
+2711571
+
+=============== Figure 1. =================
+=============== Figure 2. =================
+=============== Figure 3. =================
+=============== Figure 4. =================
+=============== Figure 5. =================
+=============== Figure 6. =================
+<pymongo.results.InsertOneResult object at 0x7f28ebbb0a68>
+--------------publication no. 16 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4615262
+
+4615262
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+=============== Figure 8 =================
+=============== Figure 9 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebe4fc18>
+--------------publication no. 17 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4694913
+
+4694913
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+=============== Figure 8 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebcb4120>
+--------------publication no. 18 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4877665
+
+4877665
+
+=============== Fig. S1 =================
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebcb4288>
+--------------publication no. 19 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4917668
+
+4917668
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+<pymongo.results.InsertOneResult object at 0x7f28eb862480>
+--------------publication no. 20 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3637117
+
+3637117
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+=============== Figure 8 =================
+=============== Figure 9 =================
+=============== Figure 10 =================
+=============== Figure 11 =================
+=============== Figure 12 =================
+=============== Figure 13 =================
+=============== Figure 14 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebe82708>
+--------------publication no. 21 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4370726
+
+4370726
+
+=============== Fig 1 =================
+=============== Fig 2 =================
+=============== Fig 3 =================
+=============== Fig 4 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebe82f78>
+--------------publication no. 22 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3671793
+
+3671793
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebbe6870>
+--------------publication no. 23 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4005655
+
+4005655
+
+=============== Figure 1. =================
+=============== Figure 2. =================
+=============== Figure 3. =================
+=============== Figure 4. =================
+<pymongo.results.InsertOneResult object at 0x7f28ebbe6f78>
+--------------publication no. 24 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4380452
+
+4380452
+
+=============== Fig 1 =================
+=============== Fig 2 =================
+=============== Fig 3 =================
+=============== Fig 4 =================
+=============== Fig 5 =================
+=============== Fig 6 =================
+<pymongo.results.InsertOneResult object at 0x7f28eb764f30>
+--------------publication no. 25 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3776730
+
+3776730
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+=============== Figure 8 =================
+=============== Figure 9 =================
+=============== Figure 10 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebbe6a20>
+--------------publication no. 26 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3150357
+
+3150357
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebcbc048>
+--------------publication no. 27 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3832613
+
+3832613
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+=============== Figure 8 =================
+=============== Figure 9 =================
+=============== Figure 10 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebdfcca8>
+--------------publication no. 28 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5008310
+
+5008310
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebbe6948>
+--------------publication no. 29 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4484440
+
+4484440
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+=============== Figure 8 =================
+<pymongo.results.InsertOneResult object at 0x7f28eb97ee10>
+--------------publication no. 30 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4207936
+
+4207936
+
+=============== Figure 1. =================
+=============== Figure 2. =================
+<pymongo.results.InsertOneResult object at 0x7f28ebcbc0d8>
+--------------publication no. 31 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4560915
+
+4560915
+
+=============== Fig. 1 =================
+=============== Fig. 2 =================
+=============== Fig. 3 =================
+=============== Fig. 4 =================
+=============== Fig. 5 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebb85cf0>
+--------------publication no. 32 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3001083
+
+3001083
+
+=============== Figure 1. =================
+=============== Figure 2. =================
+=============== Figure 3. =================
+=============== Figure 4. =================
+=============== Figure 5. =================
+<pymongo.results.InsertOneResult object at 0x7f28ebf61ca8>
+--------------publication no. 33 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4608152
+
+4608152
+
+=============== Fig. 1 =================
+=============== Fig. 2 =================
+=============== Fig. 3 =================
+=============== Fig. 4 =================
+=============== Fig. 5 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebf613a8>
+--------------publication no. 34 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4976202
+
+4976202
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+<pymongo.results.InsertOneResult object at 0x7f28eb5fc9d8>
+--------------publication no. 35 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3873998
+
+3873998
+
+=============== Figure 1 =================
+=============== Figure 2 =================
+=============== Figure 3 =================
+=============== Figure 4 =================
+=============== Figure 5 =================
+=============== Figure 6 =================
+=============== Figure 7 =================
+=============== Figure 8 =================
+=============== Figure 9 =================
+=============== Figure 10 =================
+<pymongo.results.InsertOneResult object at 0x7f28ebf61438>
+--------------publication no. 36 ----------------
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4393352
+
+4393352
+
+=============== Extended Data Figure 1 =================
