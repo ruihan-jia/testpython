@@ -27,12 +27,15 @@ with open('pmcids1') as f:
 client = MongoClient()
 db = client.task1
 collection = db.publications
-
+progress = 1
 
 
 for x in content:
 	url = api + x
+	print("--------------publication no.", progress, "----------------")
 	print(url)
+	print(x)
+	progress = progress + 1
 
 	#get xml and parse it
 	content = urllib.request.urlopen(url).read()
@@ -50,45 +53,48 @@ for x in content:
 	i = 1
 	#parse each figure info for publication
 	for fig in soup.find_all("fig"):
-		print("===============", fig.find("label").text, "=================")
+		if fig.find("label"):
+			print("===============", fig.find("label").text, "=================")
 		figTitle = "fig"+str(i)
 		i=i+1
 
 		figData[figTitle]={}
-		figText = fig.find("caption").text
-		figText2 = figText.translate(str.maketrans('','',unwanted_chars))
-		figText3 = figText2.split()
-		figTextFreq = Counter(figText3)
-#		print(fig.find("graphic"))
-		if fig.find("graphic").has_attr('xlink:href'):
-			figData[figTitle]["url"] = fig.find("graphic")['xlink:href']
-		elif fig.find("graphic").has_attr('href'):
-			figData[figTitle]["url"] = fig.find("graphic")['href']
-		figData[figTitle]["caption"] = figText
 
-		#used to store word co-occurrences
-		cooc = {}
-		for word in figTextFreq:
-#			print(word)
-			if word in bodyWordFreq:
-#				print("exist:", figTextFreq[word], bodyWordFreq[word])
-				cooc[word] = figTextFreq[word] + bodyWordFreq[word]
-#			else:
-#				print("does not exist")
+		if fig.find("caption"):
+			figText = fig.find("caption").text
+			figText2 = figText.translate(str.maketrans('','',unwanted_chars))
+			figText3 = figText2.split()
+			figTextFreq = Counter(figText3)
+			#print(fig.find("graphic"))
+			if fig.find("graphic").has_attr('xlink:href'):
+				figData[figTitle]["url"] = fig.find("graphic")['xlink:href']
+			elif fig.find("graphic").has_attr('href'):
+				figData[figTitle]["url"] = fig.find("graphic")['href']
+			figData[figTitle]["caption"] = figText
 
-		figData[figTitle]["cooc"] = cooc
+			#used to store word co-occurrences
+			cooc = {}
+			for word in figTextFreq:
+				#print(word)
+				if word in bodyWordFreq:
+					#print("exist:", figTextFreq[word], bodyWordFreq[word])
+					cooc[word] = figTextFreq[word] + bodyWordFreq[word]
+				#else:
+					#print("does not exist")
+
+			figData[figTitle]["cooc"] = cooc
 
 
 	pubData["pid"] = x
 	pubData["figData"] = figData
 
 	result = collection.insert_one(pubData)
-	print(x, result)
+	print(result)
 
 
 #record end time
 n2=dt.datetime.now()
-#print((n2-n1).microseconds)
+print((n2-n1).microseconds)
 
 
 
