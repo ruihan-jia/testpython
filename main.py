@@ -7,67 +7,88 @@ from collections import Counter
 import datetime as dt
 from pymongo import MongoClient
 
+
+#record time
+n1 = dt.datetime.now()
+
 #default url
-url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4661086"
+api = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id="
+#pid = "4661086"
+#url = api + pid
 unwanted_chars = ".,()[]"
+
+#with open('pmcids') as f:
+with open('pmcids1') as f:
+#with open('test') as f:
+	content = f.readlines()
+
 
 #setup mongodb
 client = MongoClient()
 db = client.task1
 collection = db.publications
-pubData = {}
 
-#get xml and parse it
-content = urllib.request.urlopen(url).read()
-soup = BeautifulSoup(content, "xml")
 
-#record time
-n1 = dt.datetime.now()
 
-#parse the body portion of publication
-bodyText = soup.find("body").text
-bodyText=bodyText.translate(str.maketrans('','',unwanted_chars))
-bodyWords = bodyText.split()
-bodyWordFreq = {}
-bodyWordFreq = Counter(bodyWords)
+for x in content:
+	url = api + x
+	print(url)
 
-figData = {}
-i = 1
-#parse each figure info for publication
-for fig in soup.find_all("fig"):
-	figTitle = fig.find("label").text
-	print("===============", figTitle, "=================")
-	figTitle = "fig"+str(i)
-	print(i, figTitle)
-	i=i+1
+	#get xml and parse it
+	content = urllib.request.urlopen(url).read()
+	soup = BeautifulSoup(content, "xml")
 
-	figData[figTitle]={}
-	figText = fig.find("caption").text
-	figText2 = figText.translate(str.maketrans('','',unwanted_chars))
-	figText3 = figText2.split()
-	figTextFreq = Counter(figText3)
-	figData[figTitle]["url"] = fig.find("graphic")['xlink:href']
-	figData[figTitle]["caption"] = figText
-	#print("figure url is: ", fig.find("graphic")['xlink:href'])
+	#parse the body portion of publication
+	bodyText = soup.find("body").text
+	bodyText=bodyText.translate(str.maketrans('','',unwanted_chars))
+	bodyWords = bodyText.split()
+	bodyWordFreq = {}
+	bodyWordFreq = Counter(bodyWords)
 
-	#used to store word co-occurrences
-	cooc = {}
-	for word in figTextFreq:
-		print(word)
-		if word in bodyWordFreq:
-			print("exist:", figTextFreq[word], bodyWordFreq[word])
-			cooc[word] = figTextFreq[word] + bodyWordFreq[word]
-		else:
-			print("does not exist")
-	figData[figTitle]["cooc"] = cooc
+	pubData = {}
+	figData = {}
+	i = 1
+	#parse each figure info for publication
+	for fig in soup.find_all("fig"):
+		print("===============", fig.find("label").text, "=================")
+		figTitle = "fig"+str(i)
+		i=i+1
 
-pubData["figData"] = figData
+		figData[figTitle]={}
+		figText = fig.find("caption").text
+		figText2 = figText.translate(str.maketrans('','',unwanted_chars))
+		figText3 = figText2.split()
+		figTextFreq = Counter(figText3)
+#		print(fig.find("graphic"))
+		if fig.find("graphic").has_attr('xlink:href'):
+			figData[figTitle]["url"] = fig.find("graphic")['xlink:href']
+		elif fig.find("graphic").has_attr('href'):
+			figData[figTitle]["url"] = fig.find("graphic")['href']
+		figData[figTitle]["caption"] = figText
 
-print(pubData)
+		#used to store word co-occurrences
+		cooc = {}
+		for word in figTextFreq:
+#			print(word)
+			if word in bodyWordFreq:
+#				print("exist:", figTextFreq[word], bodyWordFreq[word])
+				cooc[word] = figTextFreq[word] + bodyWordFreq[word]
+#			else:
+#				print("does not exist")
+
+		figData[figTitle]["cooc"] = cooc
+
+
+	pubData["pid"] = x
+	pubData["figData"] = figData
+
+	result = collection.insert_one(pubData)
+	print(x, result)
+
 
 #record end time
 n2=dt.datetime.now()
-print((n2-n1).microseconds)
+#print((n2-n1).microseconds)
 
 
 
